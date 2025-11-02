@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yan Yana Fotoğraflar (= İşaretiyle)</title>
+    <style>
+        :root {
+            --max-width: 1400px;
+            --bg-color: #dff0c2; /* Armut yeşili */
+            --text-color: #1e293b;
+            --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            --radius: 16px;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            background: var(--bg-color);
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            max-width: var(--max-width);
+            width: 100%;
+        }
+
+        .card {
+            background: #fff;
+            flex: 1 1 40%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 600px;
+        }
+
+            .card:hover {
+                transform: scale(1.02);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            }
+
+        figure {
+            margin: 0;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        figcaption {
+            padding: 1.2rem 1.5rem;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 1.6rem;
+            color: var(--text-color);
+            margin: 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Eşittir işareti stili */
+        .equal-sign {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #3b3b3b;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            user-select: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .equal-sign {
+                font-size: 3rem;
+                margin: 1rem 0;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Fotoğraf Kartı -->
+        <main class="card">
+            <figure>
+                <img src="C:/Users/Yusuf/Desktop/efe/images/efe.jpg" alt="Armut">
+                <figcaption>
+                    <h1 class="title">Armut Paşa</h1>
+                    <p class="subtitle">Kral Armut.</p>
+                </figcaption>
+            </figure>
+        </main>
+
+        <!-- Eşittir işareti -->
+        <div class="equal-sign">=</div>
+
+        <!-- 2. Fotoğraf Kartı -->
+        <main class="card">
+            <figure>
+                <img src="C:/Users/Yusuf/Desktop/efe/images/Armut.jpg" alt="Elma">
+                <figcaption>
+                    <h1 class="title">Armut Paşa</h1>
+                    <p class="subtitle">Kral Armut.</p>
+                </figcaption>
+            </figure>
+        </main>
+    </div>
+
+</body>
+</html>
